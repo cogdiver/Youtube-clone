@@ -1,5 +1,6 @@
 body{
-    border: 5px solid wheat;
+    border-bottom: 1px solid wheat;
+    margin: 0;
 }
 
 /* FUENTE DE LOS ICONOS */
@@ -108,8 +109,6 @@ body{
 .icon-blocked:before {
     content: "\ea0e";
 }
-
-
 .icon-remove_circle_outline:before {
     content: "\e801";
 }
@@ -134,10 +133,6 @@ body{
     teclado
 */
 
-
-
-
-
 /* .icon-user-solid-circle:before {
     content: "\e804";
 }
@@ -150,6 +145,89 @@ body{
 .icon-clock:before {
     content: "\e94e";
 } */
-  
 
-  
+/* --------------HEADER-------------- */
+.bar-top{
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+}
+
+.menu-bar-left{
+    margin: auto 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-menu-left{
+    margin-right: 30px;
+    line-height: 56px;
+    font-size: 16px;
+    color: #606060;
+}
+
+.menu-bar-left img{
+    width: 97px;
+}
+
+.menu-bar-left span{
+    align-self: flex-start;
+    padding-top: 18px;
+    padding-left: 7px;
+    font-size: 9.5px;
+}
+
+.search-bar{
+    display: grid;
+    grid-template-columns: minmax(40px, 450px) 60px;
+    align-content: center;
+    align-items: center;
+    margin: 0 63px 0 40px;
+}
+
+.box-search{
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #d3d3d3;
+    border-right: none;
+    font-size: 16px;
+}
+
+.search-button{
+    text-align: center;
+    border: 1px solid #d3d3d3;
+    line-height: 26px;
+    padding-top: 4px;
+}
+
+.button-search{
+    color: #828282;
+}
+
+.menu-right{
+    height: inherit;
+}
+
+.menu-right-items{
+    display: flex;
+}
+
+.icon-menu-righ{
+    width: 35px;
+    font-size: 23px;
+    line-height: 56px;
+    margin: 0 7px;
+    color: #606060;
+}
+
+.image-profile{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0 16px;
+}
+
+.icon-menu-righ.icon-search.no-show{
+    display: none;
+}

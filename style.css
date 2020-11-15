@@ -1,5 +1,5 @@
 body{
-    border-bottom: 1px solid wheat;
+    /* border-bottom: 1px solid wheat; */
     margin: 0;
 }
 
@@ -14,9 +14,9 @@ body{
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
+}
   
-  [class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: never;
@@ -29,7 +29,7 @@ body{
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
 /* DECLARACIÓN DE ICONOS */
 
@@ -213,7 +213,6 @@ body{
 .menu-right-items{
     display: flex;
     font-size: 18px;
-}
 }
 
 .icon-menu-righ{

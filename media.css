@@ -1,8 +1,0 @@
-@media screen and (max-width: 656px){
-    .search-bar{
-        display: none;
-    }
-    .icon-menu-righ.icon-search{
-        display: block;
-    }
-}

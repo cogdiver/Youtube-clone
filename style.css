@@ -180,7 +180,7 @@ body{
 
 .search-bar{
     display: grid;
-    grid-template-columns: minmax(40px, 450px) 60px;
+    grid-template-columns: minmax(40px, 574px) 64px;
     align-content: center;
     align-items: center;
     margin: 0 63px 0 40px;
@@ -188,7 +188,7 @@ body{
 
 .box-search{
     height: 30px;
-    padding: 0 10px;
+    padding: 0 11px;
     border: 1px solid #d3d3d3;
     border-right: none;
     font-size: 16px;
@@ -197,12 +197,13 @@ body{
 .search-button{
     text-align: center;
     border: 1px solid #d3d3d3;
-    line-height: 26px;
-    padding-top: 4px;
+    line-height: 28px;
+    padding-top: 2px;
 }
 
 .button-search{
     color: #828282;
+    font-size: 14px;
 }
 
 .menu-right{
@@ -211,6 +212,8 @@ body{
 
 .menu-right-items{
     display: flex;
+    font-size: 18px;
+}
 }
 
 .icon-menu-righ{
@@ -228,6 +231,6 @@ body{
     padding: 0 16px;
 }
 
-.icon-menu-righ.icon-search.no-show{
+.icon-menu-righ.icon-search{
     display: none;
 }

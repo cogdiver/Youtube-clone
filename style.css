@@ -238,6 +238,7 @@ body{
 /* MENU PEQUEÑO DE PRESENTACIÓN */
 
 .menu-left-small{
+    /*display: none;  /* para diseñar el segundo menu */
     width: 72px;
     position: fixed;
     left: 0;
@@ -263,6 +264,26 @@ body{
     font-size: 9px;
     letter-spacing: .5px;
 }
+
+
+/* MENU GRANDE DESPLEGABLE */
+
+.menu-left{
+    display: none;
+}
+
+.menu-left-item{
+
+}
+
+.icon-menu-left{
+
+}
+
+.menu-left-item{
+
+}
+
 
 /* media queries*/
 

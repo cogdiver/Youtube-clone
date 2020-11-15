@@ -228,6 +228,22 @@ body{
     padding: 0 16px;
 }
 
-.icon-menu-righ.icon-search.no-show{
+.icon-menu-righ.icon-search{
     display: none;
+    font-size: 17px;
+}
+
+
+
+
+
+/* media queries*/
+
+@media screen and (max-width: 656px){
+    .search-bar{
+        display: none;
+    }
+    .icon-menu-righ.icon-search{
+        display: block;
+    }
 }

@@ -216,18 +216,20 @@ body{
 }
 
 .icon-menu-righ{
-    width: 35px;
-    font-size: 23px;
+    width: 24px;
+    font-size: 24px;
     line-height: 56px;
-    margin: 0 7px;
+    padding: 0 15px;
     color: #606060;
+    border: 1px solid;
 }
 
-.image-profile{
-    border: 1px solid transparent;
+.menu-right-items .image-profile{
+    /* border: 1px solid transparent; */
     border-radius: 50%;
     margin: auto;
-    padding: 0 16px;
+    padding: 0 15px;
+    width: 32px;
 }
 
 .icon-menu-righ.icon-search{
@@ -367,6 +369,80 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
+
+
+
+/* CONTENIDO PRINCIPAL */
+.main-content{
+    position: relative;
+    left: 240px;
+    top: 56px;
+}
+
+
+
+
+
+/* MENUS DE LA BARRA PRINCIPAL */
+
+.menu-crear,
+.menu-apps,
+.menu-notifications,
+.menu-profile{
+    position: absolute;
+    top: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    background: #ffffff;
+}
+
+/* MENU CREAR */
+.menu-crear{
+    display: none;    /*menu oculto*/
+    right: 32px;
+    width: 206px;
+    height: 96px;
+}
+
+.menu-crear-item{
+    display: grid;
+    grid-template-columns: 56px 150px;
+    align-items: center;
+    text-decoration: none;
+    color: #474747;
+    margin: 17px 0;
+}
+
+.icon-menu-crear{
+    justify-self: center;
+    font-size: 22px;
+}
+
+.menu-crear-item p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* MENU APPS */
+.menu-apps{
+    right: 139px;
+    width: 245px;
+}
+
+
+
+
+
+.menu-notifications{
+    right: 85px;
+    width: 478px;
+}
+.menu-profile{
+    right: 17px;
+    width: 298px;
+}
+
 
 /* media queries*/
 

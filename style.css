@@ -147,6 +147,13 @@ body{
 } */
 
 /* --------------HEADER-------------- */
+.header{
+    position: fixed;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1;
+}
+
 .bar-top{
     display: flex;
     justify-content: space-between;
@@ -282,7 +289,7 @@ body{
     top: 56px;
     text-align: center;
     height: 93vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .menu-left.change{
@@ -464,10 +471,93 @@ body{
     padding-bottom: 8px;
 }
 
+/* MENU NOTIFICACIONES */
 .menu-notifications{
+    display: none;    /*menu oculto*/
     right: 85px;
     width: 478px;
 }
+
+.bar-notification{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 49px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bar-notification p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: #272727;
+}
+
+.config{
+    font-size: 19px;
+    text-decoration: none;
+    color: #909090;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.button-config{
+    line-height: 30px;
+}
+
+.notifications{
+    overflow: auto;
+    max-height: 593px;
+}
+
+.notification{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 80px 238px 96px auto;
+    grid-template-rows: 48px;
+    padding: 16px;
+    padding-left: 0;
+    align-items: center;
+}
+
+.notification .image-profile{
+    width: 46px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.content-notification{
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-notification{
+    font-size: 14px;
+    color: #141414;
+}
+
+.time-notification{
+    font-size: 13.4px;
+    color: #7a7a7a;
+}
+
+.notification .image-content{
+    width: 86px;
+}
+
+.more-options-notification{
+    font-size: 20px;
+    justify-self: center;
+    align-self: start;
+}
+
+.title-notification::before{
+    content: "Recomendada: ";
+}
+
+/* MENU PERFIL */
 .menu-profile{
     right: 17px;
     width: 298px;

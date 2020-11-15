@@ -235,9 +235,34 @@ body{
     font-size: 17px;
 }
 
+/* MENU PEQUEÑO DE PRESENTACIÓN */
 
+.menu-left-small{
+    width: 72px;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    padding: 19px 5px;
+    text-align: center;
+    height: 100vh;
+}
 
+.left-small-item{
+    text-decoration: none;
+    color: #606060;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
 
+.icon-menu-left-small{
+    font-size: 22px;
+}
+
+.menu-left-small p{
+    margin: 6px 0 32px;
+    font-size: 9px;
+    letter-spacing: .5px;
+}
 
 /* media queries*/
 

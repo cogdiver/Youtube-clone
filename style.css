@@ -33,7 +33,7 @@ body{
 
 /* DECLARACIÓN DE ICONOS */
 
-.icon-menu-left:before {
+.icon-menu-left-burguer:before {
     content: "\e800";
 }
 .icon-search:before {
@@ -160,7 +160,7 @@ body{
     align-items: center;
 }
 
-.icon-menu-left{
+.icon-menu-left-burguer{
     margin-right: 30px;
     line-height: 56px;
     font-size: 16px;
@@ -238,7 +238,7 @@ body{
 /* MENU PEQUEÑO DE PRESENTACIÓN */
 
 .menu-left-small{
-    /*display: none;  /* para diseñar el segundo menu */
+    /* display: none; */
     width: 72px;
     position: fixed;
     left: 0;
@@ -270,20 +270,95 @@ body{
 
 .menu-left{
     display: none;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    text-align: center;
+    height: 93vh;
+    overflow: scroll;
 }
 
 .menu-left-item{
-
+    text-decoration: none;
+    color: #606060;
+    display: grid;
+    grid-template-columns: 75px minmax(10px, 165px);
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* .menu-left-item{
+    background: #e5e5e5;
+} */
 
 .icon-menu-left{
-
+    font-size: 21px;
+    color: #606060;
 }
 
-.menu-left-item{
-
+.menu-left-item p{
+    text-align: start;
+    margin: 14px 0;
+    color: #545454;
+    padding-left: 1px;
+    font-size: 14px;
 }
 
+.menu-left-item:nth-of-type(5){
+    border-top: 1px solid #e5e5e5;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.section-tittle{
+    text-transform: uppercase;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 10px;
+    padding-top: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #606060;
+    font-size: 14px;
+}
+
+.image-profile-suscription{
+    width: 21px;
+    justify-self: center;
+    border-radius: 50%;
+}
+
+.conditions{
+    text-transform: initial;
+    color: #606060;
+    font-size: 13px;
+    text-align: start;
+    line-height: 18px;
+    padding: 16px 48px 22px 24px;
+    margin-top: 10px;
+}
+
+.condition{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #606060;
+    margin-left: 1px;
+}
+
+.copyright{
+    display: flex;
+    margin: 0 0 8px 24px;
+    color: #9a9a9a;
+    align-items: center;
+}
+
+.icon-copyright{
+    font-size: 10px;
+}
+
+.text-copyright{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
 
 /* media queries*/
 

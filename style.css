@@ -559,10 +559,98 @@ body{
 
 /* MENU PERFIL */
 .menu-profile{
+    display: none;
     right: 17px;
     width: 298px;
+    /* overflow: auto; */
+    max-height: 712px;
+    z-index: 1;
 }
 
+.account{
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-rows: repeat(3, 34px);
+    grid-template-areas: "image name" "image email" ". admin";
+    border-bottom: 1px solid #e5e5e5;
+    align-items: center;
+}
+
+.image-profile{
+    width: 40px;
+    border-radius: 50%;
+    grid-area: image;
+    justify-self: center;
+}
+
+.account p{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.name-account{
+    font-size: 16px;
+    grid-area: name;
+    align-self: end;
+}
+
+.email-account{
+    font-size: 14px;
+    grid-area: email;
+    align-self: self-start;
+    padding-top: 3px;
+}
+
+.admin{
+    font-size: 14px;
+    grid-area: admin;
+    align-self: self-start;
+    color: #2d78db;
+}
+
+.options-account-container{
+    overflow: auto;
+    max-height: 610px;
+}
+
+.account-options,
+.config-global{
+    border-bottom: 1px solid #e5e5e5;
+    padding: 5px 0;
+}
+
+.account-options-item,
+.config-global-item{
+    display: grid;
+    grid-template-columns: 57px auto;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icon-account-options,
+.icon-config-global{
+    justify-self: center;
+    font-size: 20px;
+    color: #909090;
+}
+
+.account-options-item p,
+.config-global-item p{
+    font-family: 'Roboto', sans-serif;
+    color: #030303;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.restrict{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 17px;
+    height: 54px;
+    margin: auto;
+    align-self: center;
+    line-height: 54px;
+    font-size: 14px;
+}
 
 /* media queries*/
 

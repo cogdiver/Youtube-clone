@@ -1,6 +1,9 @@
 body{
     /* border-bottom: 1px solid wheat; */
     margin: 0;
+    /* height: 100vh;
+    width: 100vw;
+    position: fixed; */
 }
 
 /* FUENTE DE LOS ICONOS */
@@ -199,6 +202,7 @@ body{
     border: 1px solid #d3d3d3;
     border-right: none;
     font-size: 16px;
+    outline-color: #1c62b9;
 }
 
 .search-button{
@@ -255,6 +259,7 @@ body{
     padding: 19px 5px;
     text-align: center;
     height: 100vh;
+    background: #ffffff;
 }
 
 .menu-left-small.change{
@@ -290,6 +295,7 @@ body{
     text-align: center;
     height: 93vh;
     overflow: auto;
+    background: #ffffff;
 }
 
 .menu-left.change{
@@ -376,18 +382,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
-
-
-
-/* CONTENIDO PRINCIPAL */
-.main-content{
-    position: relative;
-    left: 240px;
-    top: 56px;
-}
-
-
-
 
 
 /* MENUS DE LA BARRA PRINCIPAL */
@@ -659,6 +653,166 @@ body{
     line-height: 54px;
     font-size: 14px;
 }
+
+/* CONTENIDO PRINCIPAL */
+
+/* .container-menus-left-content{
+    display: grid;
+    grid-template-columns: 82px auto;
+    grid-template-areas: "menu content";
+    position: absolute;
+    top: 56px;
+    /* width: 99vw;
+}
+.container-menus-left-content.change{
+    grid-template-columns: 223px auto;
+} */
+
+
+/* CONTENIDO PRINCIPAL */
+.main-content{
+    margin-top: 56px;
+    margin-left: 82px;
+    position: absolute;
+}
+
+.main-content.change{
+    margin-left: 223px;
+}
+
+.video-content,
+.mix-content{
+    display: grid;
+    background: #f9f9f9;
+    grid-template-columns: repeat(5, minmax(240px, 360px));
+    grid-gap: 16px;
+    margin: 24px 15px;
+}
+
+.video-content{
+    
+}
+
+.container-content{
+    background: wheat;
+}
+
+.container-image-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-content{
+    width: 100%;
+}
+
+.duration,
+.ver-mas-tarde,
+.agregar-lista{
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    right: 5px;
+    align-self: flex-end;
+}
+
+.duration{
+    margin: -22px 0 0;
+    padding: 1px 5px;
+    font-size: 12px;
+}
+
+..ver-mas-tarde,
+.agregar-lista{
+    font-size: 14px;
+}
+
+.ver-mas-tarde{
+
+}
+
+.icon-ver-mas-tarde{
+
+}
+
+.ver-mas-tarde p{
+    
+}
+
+.agregar-lista{
+    
+}
+
+.icon-agregar-lista{
+
+}
+
+.agregar-lista p{
+    
+}
+
+.description-content{
+
+}
+
+.description-content .image-profile{
+    width: 37px;
+    border-radius: 50%; 
+}
+
+.tittle-content{
+
+}
+
+.name-account-content{
+
+}
+
+.views-content{
+
+}
+
+.time-content{
+
+}
+
+.more-options-content{
+
+}
+
+.mix-content{
+
+}
+
+.play-max{
+
+}
+
+.play-max p{
+
+}
+
+.play-max i{
+
+}
+
+.reproduction{
+
+}
+
+.reproduction i{
+
+}
+
+.reproduction p{
+
+}
+
+.more-options-mix{
+
+}
+
 
 /* media queries*/
 

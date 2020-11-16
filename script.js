@@ -1,6 +1,7 @@
 menuBurger = document.querySelector('.icon-menu-left-burger');
 menuSmall = document.querySelector('.menu-left-small');
 menuComplet = document.querySelector('.menu-left');
+/*content = document.querySelector('.container-menus-left-content');*/
 menuBurger.addEventListener('click', change);
 
 menuCrear = document.querySelector('.menu-crear');
@@ -22,9 +23,11 @@ function change(){
     if (menuSmall.classList.contains('change')){
         menuSmall.classList.remove('change');
         menuComplet.classList.remove('change');
+        /*content.classList.remove('change');*/
     }else{
         menuSmall.classList.add('change');
         menuComplet.classList.add('change');
+        /*content.classList.add('change');*/
     }
 }
 

@@ -476,6 +476,7 @@ body{
     display: none;    /*menu oculto*/
     right: 85px;
     width: 478px;
+    z-index: 1;
 }
 
 .bar-notification{
@@ -576,7 +577,7 @@ body{
     align-items: center;
 }
 
-.image-profile{
+.account .image-profile{
     width: 40px;
     border-radius: 50%;
     grid-area: image;

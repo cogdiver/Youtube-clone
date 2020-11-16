@@ -395,6 +395,7 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-top: none;
     background: #ffffff;
+    z-index: 1;
 }
 
 /* MENU CREAR */
@@ -477,7 +478,6 @@ body{
     display: none;    /*menu oculto*/
     right: 85px;
     width: 478px;
-    z-index: 1;
 }
 
 .bar-notification{
@@ -566,7 +566,6 @@ body{
     width: 298px;
     /* overflow: auto; */
     max-height: 712px;
-    z-index: 1;
 }
 
 .account{

@@ -228,7 +228,7 @@ body{
     line-height: 56px;
     padding: 0 15px;
     color: #606060;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .menu-right-items .image-profile{
@@ -409,6 +409,13 @@ body{
     right: 32px;
     width: 206px;
     height: 96px;
+}
+
+.menu-crear.deploy,
+.menu-apps.deploy,
+.menu-notifications.deploy,
+.menu-profile.deploy{
+    display: block;
 }
 
 .menu-crear-item{

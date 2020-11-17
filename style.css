@@ -679,9 +679,9 @@ body{
     position: absolute;
 }
 
-.main-content.change{
+/* .main-content.change{
     margin-left: 223px;
-}
+} */
 
 .video-content,
 .mix-content{
@@ -697,12 +697,11 @@ body{
 }
 
 .container-content{
-    background: wheat;
+    /* background: wheat; */
 }
 
 .container-image-content{
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .image-content{
@@ -714,16 +713,17 @@ body{
 .agregar-lista{
     background: rgba(0, 0, 0, .7);
     color: white;
-    position: relative;
+    position: absolute;
     font-family: 'Roboto', sans-serif;
     right: 5px;
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 
 .duration{
-    margin: -22px 0 0;
+    margin: 0;
     padding: 1px 5px;
     font-size: 12px;
+    bottom: 9px;
 }
 
 .ver-mas-tarde,
@@ -731,62 +731,85 @@ body{
     font-size: 12px;
     display: flex;
     align-items: center;
-    padding: 8px;
-    margin: 3px 0;
+    /* padding: 8px;
+    margin: 3px 0; */
     text-transform: uppercase;
+    /* padding: 7px; */
+    display: none;
 }
 
 .ver-mas-tarde{
-
+    top: 4px;
 }
 
-.icon-ver-mas-tarde{
-
+.icon-ver-mas-tarde,
+.icon-agregar-lista{
+    font-size: 14px;
 }
 
-.ver-mas-tarde p{
-    margin: 0 12px 0 0;
+.ver-mas-tarde-text,
+.agregar-lista-text{
+    margin: 0;
+    padding: 7px;
+    display: none;
 }
 
 .agregar-lista{
-    
+    top: 36px;
 }
 
-.icon-agregar-lista{
-
+.icon-ver-mas-tarde-container,
+.icon-agregar-lista-container{
+    padding: 7px;
 }
 
-.agregar-lista p{
-    margin: 0 12px 0 0;
-}
 
 .description-content{
-
+    margin-top: 8px;
+    display: grid;
+    grid-template-areas: "image tittle tittle more" "image name name ." ". views time .";
+    font-family: 'Roboto', sans-serif;
+    grid-template-columns: 50px repeat(2,auto) 25px;
+    font-weight: 400;
+    color: #606060;
 }
 
 .description-content .image-profile{
     width: 37px;
     border-radius: 50%; 
+    grid-area: image;
 }
 
 .tittle-content{
-
+    grid-area: tittle;
+    margin: 0;
+    font-size: 17px;
+    color: #030303;
 }
 
 .name-account-content{
-
+    grid-area: name;
+    margin: 0;
+    font-size: 14px;
 }
 
 .views-content{
-
+    grid-area: views;
+    margin: 0;
+    font-size: 14px;
 }
 
 .time-content{
-
+    grid-area: time;
+    margin: 0;
+    font-size: 14px;
 }
 
 .more-options-content{
-
+    grid-area: more;
+    justify-self: center;
+    font-size: 21px;
+    font-weight: bold;
 }
 
 .mix-content{
@@ -823,9 +846,26 @@ body{
 
 
 
+/* OTROS HOVER */
+.container-content:hover .duration{
+    display: none;
+}
 
+.container-content:hover .ver-mas-tarde{
+    display: flex;
+}
 
+.container-content:hover .agregar-lista{
+    display: flex;
+}
 
+.icon-ver-mas-tarde-container:hover .ver-mas-tarde-text{
+    display: block;
+}
+
+.icon-agregar-lista-container:hover .agregar-lista-text{
+    display: block;
+}
 
 
 /* SOMBRA */

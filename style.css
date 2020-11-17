@@ -808,8 +808,9 @@ body{
 .more-options-content{
     grid-area: more;
     justify-self: center;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
+    display: none;
 }
 
 .mix-content{
@@ -857,6 +858,10 @@ body{
 
 .container-content:hover .agregar-lista{
     display: flex;
+}
+
+.container-content:hover .more-options-content{
+    display: block;
 }
 
 .icon-ver-mas-tarde-container:hover .ver-mas-tarde-text{

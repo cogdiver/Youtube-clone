@@ -256,7 +256,7 @@ body{
     position: fixed;
     left: 0;
     top: 56px;
-    padding: 19px 5px;
+    padding: 5px;
     text-align: center;
     height: 100vh;
     background: #ffffff;
@@ -273,12 +273,16 @@ body{
     font-weight: 500;
 }
 
+.container-left-small-item{
+    padding: 15px 0 17px;
+}
+
 .icon-menu-left-small{
     font-size: 22px;
 }
 
 .menu-left-small p{
-    margin: 6px 0 32px;
+    margin: 6px 0 0;
     font-size: 9px;
     letter-spacing: .5px;
 }
@@ -722,9 +726,14 @@ body{
     font-size: 12px;
 }
 
-..ver-mas-tarde,
+.ver-mas-tarde,
 .agregar-lista{
-    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 3px 0;
+    text-transform: uppercase;
 }
 
 .ver-mas-tarde{
@@ -736,7 +745,7 @@ body{
 }
 
 .ver-mas-tarde p{
-    
+    margin: 0 12px 0 0;
 }
 
 .agregar-lista{
@@ -748,7 +757,7 @@ body{
 }
 
 .agregar-lista p{
-    
+    margin: 0 12px 0 0;
 }
 
 .description-content{
@@ -810,6 +819,25 @@ body{
 
 .more-options-mix{
 
+}
+
+
+
+
+
+
+
+
+/* SOMBRA */
+.container-left-small-item:hover,
+.menu-left-item:hover,
+.container-menu-crear-item:hover,
+.menu-apps-item:hover,
+.notification:hover,
+.account-options-item:hover,
+.config-global-item:hover,
+.restrict:hover{
+    background: #f2f2f2;
 }
 
 

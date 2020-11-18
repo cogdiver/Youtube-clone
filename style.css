@@ -692,22 +692,23 @@ body{
 } */
 
 .main-content{
-    margin: 56px 15px 0 97px;
+    margin: 56px 0 0 72px;
     position: relative;
+    background: #f9f9f9;
 }
 
 .main-content.change{
-    margin-left: 245px;
+    margin-left: 242px;
 }
 
 .video-content,
 .mix-content{
     display: grid;
-    background: #f9f9f9;
     grid-template-columns: repeat(5, minmax(240px, 360px));
     grid-gap: 70px 16px;
     margin: 24px auto;
     justify-content: center;
+    padding: 0 24px;
 }
 
 .main-content.change .video-content,

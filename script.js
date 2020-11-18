@@ -1,9 +1,11 @@
+//CAMBIO ENTRE EL MENU-LEFT Y EL MENU-LEFT-SMALL
 menuBurger = document.querySelector('.icon-menu-left-burger');
 menuSmall = document.querySelector('.menu-left-small');
 menuComplet = document.querySelector('.menu-left');
 content = document.querySelector('.main-content');
 menuBurger.addEventListener('click', change);
 
+//DESPLIEGUE DE LOS MENÚS-RIGHT
 menuCrear = document.querySelector('.menu-crear');
 menuApps = document.querySelector('.menu-apps');
 menuNotifications = document.querySelector('.menu-notifications');
@@ -18,6 +20,9 @@ iconCrear.addEventListener('click', deploy1);
 iconApps.addEventListener('click', deploy2);
 iconNotifications.addEventListener('click', deploy3);
 iconProfile.addEventListener('click', deploy4);
+
+//BARRA DE BUSCAR
+anchor = window.matchMedia('screen and (max-width: 710px)');
 
 function change(){
     if (menuSmall.classList.contains('change')){

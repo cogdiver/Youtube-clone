@@ -152,6 +152,7 @@ body{
 /* --------------HEADER-------------- */
 .header{
     position: fixed;
+    top: 0;
     width: 100%;
     background: #ffffff;
     z-index: 1;
@@ -686,9 +687,13 @@ body{
 
 
 /* CONTENIDO PRINCIPAL */
+/* .main-container{
+    width: 100vw;
+} */
+
 .main-content{
     margin: 56px 15px 0 97px;
-    position: absolute;
+    position: relative;
 }
 
 .main-content.change{
@@ -702,6 +707,7 @@ body{
     grid-template-columns: repeat(5, minmax(240px, 360px));
     grid-gap: 70px 16px;
     margin: 24px auto;
+    justify-content: center;
 }
 
 .main-content.change .video-content,
@@ -726,7 +732,6 @@ body{
     position: absolute;
     font-family: 'Roboto', sans-serif;
     right: 5px;
-    /* align-self: flex-end; */
 }
 
 .duration{
@@ -741,10 +746,7 @@ body{
     font-size: 12px;
     display: flex;
     align-items: center;
-    /* padding: 8px;
-    margin: 3px 0; */
     text-transform: uppercase;
-    /* padding: 7px; */
     display: none;
 }
 

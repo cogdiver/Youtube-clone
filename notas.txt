@@ -1,0 +1,8 @@
+borde del buscador azul
+sombra de menu-burger
+tipos de fuentes mas delgadas
+faltan iconos
+desplegar el ver-mas-tarde y agregar-fila
+/* se debe hacer que el menu-left se superponga y no minimice el contenido */
+crear etiqueda para los iconos del menu-right
+organizar opciones de more en notificaciones, videos y mix

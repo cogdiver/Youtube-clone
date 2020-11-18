@@ -419,9 +419,9 @@ body{
     display: block;
 }
 
-.container-menu-crear-item{
+/* .container-menu-crear-item{
 
-}
+} */
 
 .menu-crear-item{
     display: grid;
@@ -706,9 +706,9 @@ body{
     display: grid;
     grid-template-columns: repeat(10, minmax(240px, 360px));
     grid-gap: 70px 16px;
-    margin: 24px auto;
+    margin: 19px auto;
     justify-content: center;
-    padding: 0 24px;
+    padding: 24px;
 }
 
 /* .main-content.change .video-content,

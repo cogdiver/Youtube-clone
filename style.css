@@ -704,17 +704,17 @@ body{
 .video-content,
 .mix-content{
     display: grid;
-    grid-template-columns: repeat(5, minmax(240px, 360px));
+    grid-template-columns: repeat(10, minmax(240px, 360px));
     grid-gap: 70px 16px;
     margin: 24px auto;
     justify-content: center;
     padding: 0 24px;
 }
 
-.main-content.change .video-content,
+/* .main-content.change .video-content,
 .main-content.change .mix-content{
-    grid-template-columns: repeat(4, minmax(240px, 360px));
-}
+    grid-template-columns: repeat(10, minmax(240px, 360px));
+} */
 
 
 .container-image-content{
@@ -944,6 +944,74 @@ body{
 
 
 /* media queries*/
+@media screen and (max-width: 3800px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(9, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 3400px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(8, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 2900px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(7, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 2500px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(6, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 2000px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(5, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(4, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 1330px){
+    /* se debe hacer que el menu-left se superponga y no minimice el contenido */
+}
+
+@media screen and (max-width: 1300px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(3, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 900px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(2, minmax(240px, 360px));
+    }
+}
+
+@media screen and (max-width: 800px){
+    .menu-left-small{
+        display: none;
+    }
+    .main-content{
+        margin-left: 0;
+    }
+}
 
 @media screen and (max-width: 656px){
     .search-bar{
@@ -953,3 +1021,11 @@ body{
         display: block;
     }
 }
+
+@media screen and (max-width: 600px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: minmax(240px, 360px);
+    }
+}
+

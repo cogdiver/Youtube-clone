@@ -125,11 +125,6 @@ function deploy(menuType){
         }else{
             menuProfile.classList.add('deploy');
         }
-        if (menuProfile.classList.contains('deploy')){
-            menuProfile.classList.remove('deploy');
-        }else{
-            menuProfile.classList.add('deploy');
-        }
     } else {
         menuCrear.classList.remove('deploy');
         menuApps.classList.remove('deploy');

@@ -1,3 +1,22 @@
+/* :root{
+    --font: 'Roboto', sans-serif;
+    --white: #ffffff;
+    --black-sombra: rgba(0, 0, 0, 0.1);
+    --black-sombra-oscura: rgba(0, 0, 0, 0.7);
+    --gray-1: #e5e5e5;
+    --gray-2: #dfdfdf;
+    --gray-3: #d3d3d3;
+    --gray-0: #909090;
+    --gray-4: #828282;
+    --gray-z: #7a7a7a;
+    --gray-5: #606060;
+    --gray-6: #474747;
+    --gray-7: #383838;
+    --gray-8: #272727;
+    --black: #030303;
+    --hipervinculos: #2d78db;
+} */
+
 body{
     /* border-bottom: 1px solid wheat; */
     margin: 0;
@@ -122,18 +141,20 @@ body{
     content: "\e82e";
 }
 /* ICONOS QUE FALTAN
-    suscriptiones-
-    historial-
-    tus videos-
-    tus peliculas-
-    mostrar mas-
-    explorar canales-
+    suscriptiones-*
+    historial-*
+    tus videos-*
+    tus peliculas-*
+    mostrar mas-*
+    explorar canales-*
     videojuegos-
     aprendizaje-
     icon-apps-
     ocultal-
     aspecto
-    teclado
+    teclado-*
+    play-*
+    youtuve tv-*
 */
 
 /* .icon-user-solid-circle:before {
@@ -883,7 +904,50 @@ body{
     grid-template-areas: "tittle tittle more" "name name .";
     grid-template-columns: repeat(2,auto) 25px;
 }
+/*-----------------------------------------------------------MORE IN VIDEOS*/
+.menu-more-options-content{
+    position: absolute;
+    top: 120%;
+    left: 91.5%;
+    width: 320px;
+    height: 243px;
+    padding: 3px 0;
+    box-shadow: 0px 0px 2px 1px #d3d3d3;
+    background: white;
+    z-index: 1;
+    border-radius: 2px;
+    display: none;
+}
 
+.menu-more-options-content.deploy{
+    display: block;
+}
+
+.interes{
+    border-bottom: 1px solid #e5e5e5;
+}
+.interes,
+.other{
+    padding: 5px 0;
+}
+.option-content{
+    display: grid;
+    grid-template-columns: 56px auto;
+    align-items: center;
+}
+.option-content i{
+    text-align: center;
+    font-size: 20px;
+    color: #909090;
+}
+.option-content p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: black;
+    margin: 10px 0;
+}
+
+/*-----------------------------------------------------------MORE IN VIDEOS*/
 
 /* OTROS HOVER */
 .container-content:hover .duration{
@@ -938,7 +1002,8 @@ body{
 .notification:hover,
 .account-options-item:hover,
 .config-global-item:hover,
-.restrict:hover{
+.restrict:hover,
+.option-content:hover{
     background: #f2f2f2;
 }
 
@@ -1015,10 +1080,43 @@ body{
 
 @media screen and (max-width: 656px){
     .search-bar{
+        margin: 0;
+        width: 0;
+    }
+    .search-button{
+        display: none;
+    }
+    .box-search{
         display: none;
     }
     .icon-menu-righ.icon-search{
         display: block;
+    }
+    .search-bar.search-change{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        padding: 12px 10px;
+        margin: 0;
+        background: white;
+
+    }
+    .box-search.search-change{
+        display: block;
+        width: 107%;
+        border: 1px solid;
+    }
+    .icon-menu-righ.icon-search.search-change{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10%;
+        text-align: center;
+        line-height: 32px;
+        margin: 12px 0;
+        padding-left: 0;
+        border-left: 1px solid;
     }
 }
 

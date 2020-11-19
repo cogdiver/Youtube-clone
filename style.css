@@ -1127,3 +1127,25 @@ body{
     }
 }
 
+@media screen and (max-width: 480px){
+    .bar-top{
+        padding: 0 5px;
+    }
+    .icon-menu-left-burger{
+        margin-right: 10px;
+    }
+    .menu-bar-left img{
+        width: 90px;
+    }
+    .menu-bar-left span{
+        padding-left: 3px;
+        font-size: 8px;
+    }
+    .menu-bar-left{
+        margin-right: 0;
+    }
+    .icon-menu-righ,
+    .menu-right-items .image-profile{
+        padding: 0 5px;
+    }
+}

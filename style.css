@@ -769,11 +769,16 @@ body{
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    display: none;
+    /* display: none; */
 }
 
 .ver-mas-tarde{
     top: 4px;
+}
+
+.icon-ver-mas-tarde-container,
+.icon-agregar-lista-container{
+    display: none;
 }
 
 .icon-ver-mas-tarde,
@@ -954,11 +959,11 @@ body{
     display: none;
 }
 
-.container-content:hover .ver-mas-tarde{
+.container-content:hover .icon-ver-mas-tarde-container{
     display: flex;
 }
 
-.container-content:hover .agregar-lista{
+.container-content:hover .icon-agregar-lista-container{
     display: flex;
 }
 
@@ -973,13 +978,14 @@ body{
 .container-content:hover .reproduction{
     display: flex;
 }
-.icon-ver-mas-tarde-container:hover, .ver-mas-tarde-text:active{
-    display: block;
+
+.ver-mas-tarde:hover, .ver-mas-tarde-text{
+    /* display: inline; */
 }
 
-.icon-agregar-lista-container:hover, .agregar-lista-text:active{
-    display: block;
-}
+.agregar-lista:hover, .agregar-lista-text{
+    /* display: block; */
+} 
 
 .notification:hover .more-options-notification{
     display: block;
@@ -1113,13 +1119,13 @@ body{
     }
     .icon-menu-righ.icon-search.search-change{
         position: absolute;
-        top: 0;
-        right: 21px;
-        width: 20px;
-        text-align: center;
-        line-height: 32px;
-        margin: 12px 0;
-        padding: 0 10px;
+            top: 0;
+            right: 21px;
+            width: 20px;
+            text-align: center;
+            line-height: 32px;
+            margin: 12px 0;
+            padding: 0 10px;
     }
 }
 

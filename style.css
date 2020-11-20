@@ -1095,28 +1095,31 @@ body{
     }
     .search-bar.search-change{
         position: absolute;
-        width: auto;
+        width: 100%;
         top: 0;
         left: 0;
-        height: 32px;
+        height: 56px;
         padding: 12px 10px;
-        margin: 0;
+        /* margin: 0; */
         background: white;
-
+        box-sizing: border-box;
+        display: block;
     }
     .box-search.search-change{
         display: block;
-        width: 107%;
+        width: 100%;
         border: 1px solid;
+        box-sizing: border-box;
     }
     .icon-menu-righ.icon-search.search-change{
         position: absolute;
         top: 0;
-        right: 0;
-        width: 10%;
+        right: 21px;
+        width: 20px;
         text-align: center;
         line-height: 32px;
-        margin: 12px 35px 12px 0;
+        margin: 12px 0;
+        padding: 0 10px;
     }
 }
 

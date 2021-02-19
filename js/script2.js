@@ -10,13 +10,13 @@ menuCrear = document.querySelector('.menu-crear');
 menuApps = document.querySelector('.menu-apps');
 menuNotifications = document.querySelector('.menu-notifications');
 menuProfile = document.querySelector('.menu-profile');
-menuMoreContent = document.querySelector('.menu-more-options-content');
+//menuMoreContent = document.querySelector('.menu-more-options-content');
 
 iconCrear = document.querySelector('.icon-menu-righ.icon-video_call');
 iconApps = document.querySelector('.icon-menu-righ.icon-stack');
 iconNotifications = document.querySelector('.icon-menu-righ.icon-bell');
 iconProfile = document.querySelector('.icon-menu-righ.image-profile');
-iconMoreContent = document.querySelector('.more-options-content');
+//iconMoreContent = document.querySelector('.more-options-content');
 
 iconCrear.addEventListener('click', deploy1);
 iconApps.addEventListener('click', deploy2);

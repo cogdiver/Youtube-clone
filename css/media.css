@@ -1,0 +1,163 @@
+/*
+Small ≥576px
+Medium ≥768px
+Large ≥992px
+Extra large ≥1200px
+Extra extra large ≥1400px
+*/
+
+@media screen and (min-width: 576px){
+    .icon-menu-left-burger{
+        margin-right: 10px;
+    }
+    .menu-bar-left img{
+        width: 90px;
+    }
+    .menu-bar-left span{
+        padding-left: 3px;
+        font-size: 8px;
+    }
+    .menu-bar-left{
+        margin-right: 0;
+    }
+    .icon-menu-righ.icon-search{
+        display: none;
+    }
+    .icon-menu-righ{
+        padding: 0 15px;
+    }/*.menu-right-items .image-profile*/
+    /*Buscador*/
+    .search-bar{
+        display: grid;
+        grid-template-columns: minmax(40px, 574px) 64px;
+        align-content: center;
+        align-items: center;
+        margin: 0 0 0 40px;
+    }
+    .box-search{
+        height: 30px;
+        padding: 0 11px;
+        border: 1px solid #d3d3d3;
+        border-right: none;
+        font-size: 16px;
+        outline-color: #1c62b9;
+    }
+    .search-button{
+        text-align: center;
+        border: 1px solid #d3d3d3;
+        line-height: 28px;
+        padding-top: 2px;
+    }
+    .button-search{
+        color: #828282;
+        font-size: 14px;
+    }
+    .search-bar.search-change{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 56px;
+        padding: 12px 10px;
+        /* margin: 0; */
+        background: white;
+        box-sizing: border-box;
+        display: block;
+    }
+    .box-search.search-change{
+        display: block;
+        width: 100%;
+        border: 1px solid;
+        box-sizing: border-box;
+    }
+    .menu-notifications{
+        right: 85px;
+    }
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(2, minmax(240px, 360px));
+    }
+}
+
+@media screen and (min-width: 600px){
+    .video-content,
+    .mix-content{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main-content{
+        margin-left: 0;
+    }
+
+    /* MENU PEQUEÑO DE PRESENTACIÓN */
+    .menu-left-small{
+        display: block;
+        width: 72px;
+        position: fixed;
+        left: 0;
+        top: 56px;
+        padding: 5px 0;
+        text-align: center;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 1;
+    }
+    .menu-left-small.hidden{
+        display: none;
+    }
+    .left-small-item{
+        text-decoration: none;
+        color: #606060;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    .container-left-small-item{
+        padding: 15px 0 17px;
+    }
+    .icon-menu-left-small{
+        font-size: 22px;
+    }
+    .menu-left-small p{
+        margin: 6px 0 0;
+        font-size: 9px;
+        letter-spacing: .5px;
+    }
+    /**************** MAIN*/
+    .main-content{
+        margin-left: 72px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(3, minmax(240px, 360px));
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(4, minmax(240px, 360px));
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(5, minmax(240px, 360px));
+    }
+}
+
+/* En 1400 o en 1200 se debe hacer que el menu-left se superponga y no minimice el contenido */
+
+
+
+
+
+
+
+

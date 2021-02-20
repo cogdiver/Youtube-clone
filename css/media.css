@@ -20,56 +20,9 @@ Extra extra large ≥1400px
     .menu-bar-left{
         margin-right: 0;
     }
-    .icon-menu-righ.icon-search{
-        display: none;
-    }
     .icon-menu-righ{
         padding: 0 15px;
     }/*.menu-right-items .image-profile*/
-    /*Buscador*/
-    .search-bar{
-        display: grid;
-        grid-template-columns: minmax(40px, 574px) 64px;
-        align-content: center;
-        align-items: center;
-        margin: 0 0 0 40px;
-    }
-    .box-search{
-        height: 30px;
-        padding: 0 11px;
-        border: 1px solid #d3d3d3;
-        border-right: none;
-        font-size: 16px;
-        outline-color: #1c62b9;
-    }
-    .search-button{
-        text-align: center;
-        border: 1px solid #d3d3d3;
-        line-height: 28px;
-        padding-top: 2px;
-    }
-    .button-search{
-        color: #828282;
-        font-size: 14px;
-    }
-    .search-bar.search-change{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 56px;
-        padding: 12px 10px;
-        /* margin: 0; */
-        background: white;
-        box-sizing: border-box;
-        display: block;
-    }
-    .box-search.search-change{
-        display: block;
-        width: 100%;
-        border: 1px solid;
-        box-sizing: border-box;
-    }
     .menu-notifications{
         right: 85px;
     }
@@ -85,13 +38,21 @@ Extra extra large ≥1400px
         padding-left: 16px;
         padding-right: 16px;
     }
+    .icon-menu-righ.icon-search{
+        display: none;
+    }
+    /************ BUSCADOR*/
+    .search-bar{
+        grid-template-columns: minmax(40px, 574px) 64px;
+        margin: 0 0 0 35px;
+        position: relative;
+    }
+    .iconBack{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px){
-    .main-content{
-        margin-left: 0;
-    }
-
     /* MENU PEQUEÑO DE PRESENTACIÓN */
     .menu-left-small{
         display: block;
@@ -146,9 +107,12 @@ Extra extra large ≥1400px
 }
 
 @media screen and (min-width: 1400px){
-    .video-content,
+    /* .video-content,
     .mix-content{
         grid-template-columns: repeat(5, minmax(240px, 360px));
+    } */
+    .main-content.marginLeftLarge{
+        margin-left: 242px;
     }
 }
 

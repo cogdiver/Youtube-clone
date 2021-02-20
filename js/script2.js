@@ -1,139 +1,84 @@
-//CAMBIO ENTRE EL MENU-LEFT Y EL MENU-LEFT-SMALL
+//***************************** CAMBIO ENTRE EL MENU-LEFT Y EL MENU-LEFT-SMALL
 menuBurger = document.querySelector('.icon-menu-left-burger');
-menuSmall = document.querySelector('.menu-left-small');
 menuComplet = document.querySelector('.menu-left');
+menuSmall = document.querySelector('.menu-left-small');
 content = document.querySelector('.main-content');
-menuBurger.addEventListener('click', change);
+menuBurger.addEventListener('click', changeMenuComplet);
 
-//DESPLIEGUE DE LOS MENÚS-RIGHT AND MORE
+anchorForMenus = window.matchMedia('screen and (min-width: 768px)')
+validationForMenus()
+anchorForMenus.addEventListener('change', validationForMenus)
+
+anchorForContent = window.matchMedia('screen and (min-width: 1400px)')
+validationForContent()
+anchorForContent.addEventListener('change', validationForContent)
+
+
+//***************************** DESPLIEGUE DE LOS MENÚS-RIGHT AND MORE
 menuCrear = document.querySelector('.menu-crear');
 menuApps = document.querySelector('.menu-apps');
 menuNotifications = document.querySelector('.menu-notifications');
 menuProfile = document.querySelector('.menu-profile');
-//menuMoreContent = document.querySelector('.menu-more-options-content');
 
 iconCrear = document.querySelector('.icon-menu-righ.icon-video_call');
 iconApps = document.querySelector('.icon-menu-righ.icon-stack');
 iconNotifications = document.querySelector('.icon-menu-righ.icon-bell');
 iconProfile = document.querySelector('.icon-menu-righ.image-profile');
-//iconMoreContent = document.querySelector('.more-options-content');
 
 iconCrear.addEventListener('click', deploy1);
 iconApps.addEventListener('click', deploy2);
 iconNotifications.addEventListener('click', deploy3);
 iconProfile.addEventListener('click', deploy4);
-iconMoreContent.addEventListener('click', deploy5);
 
-//BARRA DE BUSCAR
+
+//********************************************** BARRA DE BUSCAR
 barraBuscar = document.querySelector('.search-bar');
-cajaBuscar = document.querySelector('.box-search');
 iconBuscar = document.querySelector('.icon-menu-righ.icon-search');
-//header = document.querySelector('.header');
+iconBack = document.querySelector('.iconBack');
 
-anchor = window.matchMedia('screen and (max-width: 656px)');
-validation(anchor.matches);
-anchor.addEventListener(validation);
-
-function validation(event){
-    if (anchor.matches){
-        iconBuscar.addEventListener('click', show);
-    }else{
-        iconBuscar.removeEventListener('click', show);
-    } 
-}
-
-function show(){
-    if (barraBuscar.classList.contains('search-change')){
-        cajaBuscar.classList.remove('search-change');
-        barraBuscar.classList.remove('search-change');
-        iconBuscar.classList.remove('search-change');
-    }else{
-        cajaBuscar.classList.add('search-change');
-        barraBuscar.classList.add('search-change');
-        iconBuscar.classList.add('search-change');
-    }
-}
+anchorForSearch = window.matchMedia('screen and (min-width: 600px)');
+validation();
+anchorForSearch.addEventListener('change',validation);
 
 
+//********************************************** MORE OPCTION
+menusMoreContent = document.querySelectorAll('.menu-more-options-content')
+iconMoreContent = document.querySelectorAll('.more-options-content')
 
-function change(){
-    if (menuSmall.classList.contains('change')){
-        menuSmall.classList.remove('change');
-        menuComplet.classList.remove('change');
-        content.classList.remove('change');
-    }else{
-        menuSmall.classList.add('change');
-        menuComplet.classList.add('change');
-        content.classList.add('change');
-    }
-}
+iconMoreContent.forEach((icon, i) => {
+    icon.addEventListener('click', ()=>deployMenuMoreContent(i))
+});
 
-function deploy1(){
-    deploy(1);
-}
-function deploy2(){
-    deploy(2);
-}
-function deploy3(){
-    deploy(3);
-}
-function deploy4(){
-    deploy(4);
-}
-function deploy5(){
-    deploy(5);
-}
+containers1 = window.matchMedia('screen and (max-width: 576px)')
+containers1.addEventListener('change', container1)
+container1()
 
-function deploy(menuType){
-    if (menuType==1){
-        menuApps.classList.remove('deploy');
-        menuNotifications.classList.remove('deploy');
-        menuProfile.classList.remove('deploy');
-        menuMoreContent.classList.remove('deploy');
-        if (menuCrear.classList.contains('deploy')){
-            menuCrear.classList.remove('deploy');
+containers2 = window.matchMedia('screen and (min-width: 576px)')
+containers2.addEventListener('change', container2)
+container2()
+
+containers3 = window.matchMedia('screen and (min-width: 992px)')
+containers3.addEventListener('change', container3)
+container3()
+
+containers4 = window.matchMedia('screen and (min-width: 1200px)')
+containers4.addEventListener('change', container4)
+container4()
+
+
+//********************************************** MORE OPCTION NOTIFICATION
+menusMoreNotifi = document.querySelectorAll('.menu-more-options-notification')
+iconMoreNotifi = document.querySelectorAll('.more-options-notification')
+
+iconMoreNotifi.forEach((iconN, j) => {
+    iconN.addEventListener('click', ()=>{
+        debugger
+        console.log(j);
+        if (menusMoreNotifi[j].classList.contains('deploy')){
+            removeMenusMoreNotifi();
         }else{
-            menuCrear.classList.add('deploy');
+            removeMenusMoreNotifi();
+            menusMoreNotifi[j].classList.add('deploy');
         }
-    } else if (menuType==2){
-        menuCrear.classList.remove('deploy');
-        menuNotifications.classList.remove('deploy');
-        menuProfile.classList.remove('deploy');
-        menuMoreContent.classList.remove('deploy');
-        if (menuApps.classList.contains('deploy')){
-            menuApps.classList.remove('deploy');
-        }else{
-            menuApps.classList.add('deploy');
-        }
-    } else if (menuType==3){
-        menuCrear.classList.remove('deploy');
-        menuApps.classList.remove('deploy');
-        menuProfile.classList.remove('deploy');
-        menuMoreContent.classList.remove('deploy');
-        if (menuNotifications.classList.contains('deploy')){
-            menuNotifications.classList.remove('deploy');
-        }else{
-            menuNotifications.classList.add('deploy');
-        }
-    } else if (menuType==4){
-        menuCrear.classList.remove('deploy');
-        menuApps.classList.remove('deploy');
-        menuNotifications.classList.remove('deploy');
-        menuMoreContent.classList.remove('deploy');
-        if (menuProfile.classList.contains('deploy')){
-            menuProfile.classList.remove('deploy');
-        }else{
-            menuProfile.classList.add('deploy');
-        }
-    } else {
-        menuCrear.classList.remove('deploy');
-        menuApps.classList.remove('deploy');
-        menuNotifications.classList.remove('deploy');
-        menuProfile.classList.remove('deploy');
-        if (menuMoreContent.classList.contains('deploy')){
-            menuMoreContent.classList.remove('deploy');
-        }else{
-            menuMoreContent.classList.add('deploy');
-        }
-    }
-}
+    })
+});

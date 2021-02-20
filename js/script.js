@@ -173,7 +173,6 @@ function removeMenusMoreContent() {
 //********************************************** MORE OPCTION NOTIFICATION
 
 function removeMenusMoreNotifi() {
-    debugger
     menusMoreNotifi.forEach(menu => {
         menu.classList.remove('deploy');
     });

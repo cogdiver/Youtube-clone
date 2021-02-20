@@ -72,7 +72,6 @@ iconMoreNotifi = document.querySelectorAll('.more-options-notification')
 
 iconMoreNotifi.forEach((iconN, j) => {
     iconN.addEventListener('click', ()=>{
-        debugger
         console.log(j);
         if (menusMoreNotifi[j].classList.contains('deploy')){
             removeMenusMoreNotifi();

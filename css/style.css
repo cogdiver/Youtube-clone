@@ -211,18 +211,27 @@ body{
 .box-search{
     display: block;
     width: 100%;
-    height: 30px;
+    height: 32px;
     padding: 0 11px;
     border: 1px solid #d3d3d3;
     border-right: none;
     font-size: 16px;
-    outline-color: #1c62b9;
+    outline: none;
+    box-sizing: border-box;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .search-button{
     text-align: center;
     border: 1px solid #d3d3d3;
     line-height: 28px;
     padding-top: 2px;
+    background: #ffffff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.box-search:focus{
+    border: 1.2px solid #3ea6ff;
 }
 .button-search{
     color: #828282;
@@ -490,6 +499,7 @@ body{
     grid-template-rows: 48px;
     padding: 16px 0;
     align-items: center;
+    position: relative;
 }
 .notification .image-profile{
     width: 46px;
@@ -514,8 +524,7 @@ body{
     font-size: 22px;
     justify-self: center;
     align-self: start;
-    display: none;
-    color: #909090;
+    color: transparent;
 }
 .title-notification::before{
     content: "Recomendada: ";
@@ -604,20 +613,7 @@ body{
 }
 
 
-/* CONTENIDO PRINCIPAL */
-
-/* .container-menus-left-content{
-    display: grid;
-    grid-template-columns: 82px auto;
-    grid-template-areas: "menu content";
-    position: absolute;
-    top: 56px;
-    /* width: 99vw;
-}
-.container-menus-left-content.change{
-    grid-template-columns: 223px auto;
-} */
-
+/**************************************************** CONTENIDO PRINCIPAL */
 .main-content{
     margin: 56px 0 0; /* 72px;*/
     position: relative;
@@ -632,10 +628,6 @@ body{
     justify-content: center;
     padding-top: 24px;
 }
-/* .main-content.change .video-content,
-.main-content.change .mix-content{
-    grid-template-columns: repeat(10, minmax(240px, 360px));
-} */
 .container-image-content{
     position: relative;
 }
@@ -663,7 +655,6 @@ body{
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    /* display: none; */
 }
 .ver-mas-tarde{
     top: 4px;
@@ -784,7 +775,7 @@ body{
 
 
 
-/*-----------------------------------------------------------MORE IN VIDEOS*/
+/************************************************************* MORE IN VIDEOS*/
 .menu-more-options-content{
     position: absolute;
     top: 120%;
@@ -829,13 +820,49 @@ body{
     margin: 10px 0;
 }
 
-.hidden{
+
+/************************************************************* MORE IN NOTIFICATION*/
+.menu-more-options-notification{
     display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    right: 6px;
+    width: 56%;
+    top: 45px;
+    z-index: 1;
+    padding: 10px 0;
+}
+.menu-more-options-notification p{
+    margin: 0;
+}
+.menu-more-options-notification .ocultar{
+    display: grid;
+    grid-template-areas: "icon parr";
+    grid-template-columns: 59px auto;
+    grid-template-rows: 44px;
+    align-items: center;
+    color: #313131;
+    font-size: 16.5px;
+}
+.iconOcultar{
+    grid-area: icon;
+    color: #909090;
+    justify-self: center;
+    font-size: 21px;
+}
+.ocultarN{
+    grid-area: parr;
+}
+.ocultarNA{
+    grid-area: parr;
+}
+.menu-more-options-notification.deploy{
+    display: block;
 }
 
-/*-----------------------------------------------------------MORE IN VIDEOS*/
-
-/* OTROS HOVER */
+/************************************************************* OTROS HOVER */
 .container-content:hover .duration{
     display: none;
 }
@@ -863,11 +890,9 @@ body{
 }
 */
 .notification:hover .more-options-notification{
-    display: block;
+    color: #909090;
 }
-.more-options-notification:hover{
-    color: #606060;
-}
+.notification:hover .more-options-notification:hover,
 .more-options-content:hover,
 .more-options-mix:hover{
     color: #606060;
@@ -883,6 +908,13 @@ body{
 .config-global-item:hover,
 .restrict:hover,
 .option-content:hover,
-.search-button:hover{
+.search-button:hover,
+.ocultar:hover{
     background: #f2f2f2;
+}
+
+/*************************************** HIDDEN */
+
+.hidden{
+    display: none;
 }

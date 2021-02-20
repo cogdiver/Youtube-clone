@@ -120,8 +120,6 @@ function removeMenusRight(){
 barraBuscar = document.querySelector('.search-bar');
 iconBuscar = document.querySelector('.icon-menu-righ.icon-search');
 iconBack = document.querySelector('.iconBack');
-//cajaBuscar = document.querySelector('.box-search');
-//header = document.querySelector('.header');
 
 anchorForSearch = window.matchMedia('screen and (min-width: 600px)');
 validation();
@@ -139,14 +137,9 @@ function validation(){
 
 function changeSearchBar(){
     if (barraBuscar.classList.contains('hidden')){
-        //cajaBuscar.classList.remove('hidden');
-        //iconBuscar.classList.remove('hidden');
         iconBuscar.removeEventListener('click', changeSearchBar);
         iconBack.addEventListener('click', changeSearchBar);
     }else{
-        //cajaBuscar.classList.add('hidden');
-        //barraBuscar.classList.add('hidden');
-        //iconBuscar.classList.add('hidden');
         iconBuscar.addEventListener('click', changeSearchBar);
         iconBack.removeEventListener('click', changeSearchBar);
     }
@@ -227,6 +220,31 @@ function deployMenuMoreContent(i){
 
 function removeMenusMoreContent() {
     menusMoreContent.forEach(menu => {
+        menu.classList.remove('deploy');
+    });
+}
+
+
+//********************************************** MORE OPCTION NOTIFICATION
+menusMoreNotifi = document.querySelectorAll('.menu-more-options-notification')
+iconMoreNotifi = document.querySelectorAll('.more-options-notification')
+
+iconMoreNotifi.forEach((iconN, j) => {
+    iconN.addEventListener('click', ()=>{
+        debugger
+        console.log(j);
+        if (menusMoreNotifi[j].classList.contains('deploy')){
+            removeMenusMoreNotifi();
+        }else{
+            removeMenusMoreNotifi();
+            menusMoreNotifi[j].classList.add('deploy');
+        }
+    })
+});
+
+function removeMenusMoreNotifi() {
+    debugger
+    menusMoreNotifi.forEach(menu => {
         menu.classList.remove('deploy');
     });
 }

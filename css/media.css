@@ -107,21 +107,14 @@ Extra extra large ≥1400px
 }
 
 @media screen and (min-width: 1400px){
-    /* .video-content,
-    .mix-content{
-        grid-template-columns: repeat(5, minmax(240px, 360px));
-    } */
     .main-content.marginLeftLarge{
         margin-left: 242px;
     }
 }
 
-/* En 1400 o en 1200 se debe hacer que el menu-left se superponga y no minimice el contenido */
-
-
-
-
-
-
-
-
+@media screen and (min-width: 1400px){
+    .video-content,
+    .mix-content{
+        grid-template-columns: repeat(5, minmax(240px, 360px));
+    }
+}

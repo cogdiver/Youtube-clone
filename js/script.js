@@ -1,5 +1,18 @@
 
 //***************************** CAMBIO ENTRE EL MENU-LEFT Y EL MENU-LEFT-SMALL
+menuBurger = document.querySelector('.icon-menu-left-burger');
+menuComplet = document.querySelector('.menu-left');
+menuSmall = document.querySelector('.menu-left-small');
+content = document.querySelector('.main-content');
+menuBurger.addEventListener('click', changeMenuComplet);
+
+anchorForMenus = window.matchMedia('screen and (min-width: 768px)')
+validationForMenus()
+anchorForMenus.addEventListener('change', validationForMenus)
+
+anchorForContent = window.matchMedia('screen and (min-width: 1400px)')
+validationForContent()
+anchorForContent.addEventListener('change', validationForContent)
 
 function changeMenuComplet(){
     menuComplet.classList.toggle('hidden')
@@ -38,7 +51,22 @@ function validationForContent(){
     
 }
 
+
 //***************************** DESPLIEGUE DE LOS MENÚS-RIGHT AND MORE
+menuCrear = document.querySelector('.menu-crear');
+menuApps = document.querySelector('.menu-apps');
+menuNotifications = document.querySelector('.menu-notifications');
+menuProfile = document.querySelector('.menu-profile');
+
+iconCrear = document.querySelector('.icon-menu-righ.icon-video_call');
+iconApps = document.querySelector('.icon-menu-righ.icon-stack');
+iconNotifications = document.querySelector('.icon-menu-righ.icon-bell');
+iconProfile = document.querySelector('.icon-menu-righ.image-profile');
+
+iconCrear.addEventListener('click', deploy1);
+iconApps.addEventListener('click', deploy2);
+iconNotifications.addEventListener('click', deploy3);
+iconProfile.addEventListener('click', deploy4);
 
 function deploy1(){
     deployMenusRight(1);
@@ -54,7 +82,8 @@ function deploy4(){
 }
 
 function deployMenusRight(menuType){
-    removeMenusMoreContent()
+    removeMenusMore(menusMoreContent)
+    removeMenusMore(menusMoreNotifi)
     switch (menuType) {
         case 1:
             menuCrear.classList.toggle('hidden');
@@ -90,7 +119,15 @@ function removeMenusRight(){
     menuProfile.classList.add('hidden');
 }
 
+
 //********************************************** BARRA DE BUSCAR
+barraBuscar = document.querySelector('.search-bar');
+iconBuscar = document.querySelector('.icon-menu-righ.icon-search');
+iconBack = document.querySelector('.iconBack');
+
+anchorForSearch = window.matchMedia('screen and (min-width: 600px)');
+validation();
+anchorForSearch.addEventListener('change',validation);
 
 function validation(){
     if (anchorForSearch.matches){
@@ -115,6 +152,28 @@ function changeSearchBar(){
 
 
 //********************************************** MORE OPCTION
+menusMoreContent = document.querySelectorAll('.menu-more-options-content')
+iconMoreContent = document.querySelectorAll('.more-options-content')
+
+iconMoreContent.forEach((icon, i) => {
+    icon.addEventListener('click', ()=>deployMenuMoreContent(i))
+});
+
+containers1 = window.matchMedia('screen and (max-width: 576px)')
+containers1.addEventListener('change', container1)
+container1()
+
+containers2 = window.matchMedia('screen and (min-width: 576px)')
+containers2.addEventListener('change', container2)
+container2()
+
+containers3 = window.matchMedia('screen and (min-width: 992px)')
+containers3.addEventListener('change', container3)
+container3()
+
+containers4 = window.matchMedia('screen and (min-width: 1200px)')
+containers4.addEventListener('change', container4)
+container4()
 
 function container1(){
     if (containers1.matches) {
@@ -138,7 +197,6 @@ function container4(){
 }
 
 function assignClassFinish(containers){
-    //debugger
     if (containers===1) {
         menusMoreContent.forEach(container => {
             container.classList.add('finish');
@@ -155,26 +213,36 @@ function assignClassFinish(containers){
 
 function deployMenuMoreContent(i){
     removeMenusRight()
+    removeMenusMore(menusMoreNotifi)
     if (menusMoreContent[i].classList.contains('deploy')) {
-        removeMenusMoreContent()
+        removeMenusMore(menusMoreContent)
     }else{
-        removeMenusMoreContent()
+        removeMenusMore(menusMoreContent)
         menusMoreContent[i].classList.add('deploy');
     }
 }
 
-function removeMenusMoreContent() {
-    menusMoreContent.forEach(menu => {
-        menu.classList.remove('deploy');
-    });
-}
-
 
 //********************************************** MORE OPCTION NOTIFICATION
+menusMoreNotifi = document.querySelectorAll('.menu-more-options-notification')
+iconMoreNotifi = document.querySelectorAll('.more-options-notification')
 
-function removeMenusMoreNotifi() {
-    menusMoreNotifi.forEach(menu => {
+iconMoreNotifi.forEach((icon, i) => {
+    icon.addEventListener('click', ()=>{
+        console.log(i);
+        if (menusMoreNotifi[i].classList.contains('deploy')){
+            removeMenusMore(menusMoreNotifi);
+        }else{
+            removeMenusMore(menusMoreNotifi);
+            menusMoreNotifi[i].classList.add('deploy');
+        }
+    })
+});
+
+
+//********************************************** REMOVE MENUS MORE
+function removeMenusMore(menus) {
+    menus.forEach(menu => {
         menu.classList.remove('deploy');
     });
 }
-
